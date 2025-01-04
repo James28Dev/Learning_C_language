@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <ctype.h>
 
-main() {
+void main() {
 	char msg[50], choice;
     int i = 0;
+    
     do {
+    	printf("  Program reverse word\n");
+    	printf("------------------------\n");
         printf("Enter message : ");
-        scanf("%s", msg);
+        scanf(" %s", msg);
         
-        do {i++;}
-        while(msg[i] != '\0');
+        do {
+			i++;
+		} while(msg[i] != '\0');
         
         printf("Reverse word : ");
         
@@ -17,11 +21,12 @@ main() {
             i--;
             printf("%c", msg[i]);
         }
+        
         printf("\nplay again (Y/N) :  ");
         getchar();
-        scanf("%c", &choice);
+        scanf(" %c", &choice);
         choice = toupper(choice);
+        printf("\n");
         }
-        
-        while(choice == 'Y');
+    while(choice == 'Y');
 }
