@@ -6,6 +6,8 @@ main() {
     char i;
     
     do {
+    	printf("   Exponent calculator\n");
+    	printf("------------------------\n");
         printf("Enter base : ");
         scanf("%i", &bNum);
         printf("Enter exponent : ");
@@ -17,6 +19,7 @@ main() {
         
         i = getchar();
         scanf("%c", &i);
+        printf("\n");
     } while(i != '\n');
     printf("EXIT Program");
 }
