@@ -14,27 +14,31 @@ char grade (int score) {
     }
 }
 
-inputScore (int i, int score[]) {
-	for (i = 0; i < 5; i++) {
+inputScore (int i, int score[], int num) {
+	for (i = 0; i < num; i++) {
         printf("Input Score [%d] : ", i + 1);
         scanf(" %d", &score[i]);
     }
 }
 
 int main () {
-	int score[5] ,i;
-	char total_grade[5];
+	int score[20] ,i, numStudent;
+	char total_grade[20];
+	
+	printf("Program calculate multiple students' grades\n");
+	printf("------------------------------------------\n");
+	printf("Number of students to be calculated = ");
+	scanf(" %d", &numStudent);
+    inputScore(i, score, numStudent);
 
-    inputScore(i, score);
-
-    printf("==========================================\n");
+    printf("\n==========================================\n");
 	printf("Sudents\t\t Score\t\t Grade\n");
 	printf("==========================================\n");
 	
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < numStudent; i++) {
         total_grade[i] = grade(score[i]);
         printf("%d\t\t %d\t\t %c\n", i + 1, score[i], total_grade[i]);
-        printf("------------------------------------------\n");
+        
     }
 
     return 0;
