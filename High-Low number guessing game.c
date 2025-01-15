@@ -13,24 +13,24 @@ int main() {
         printf("Your answer (1-100): ");
 
         do {
-            scanf(" %d", &guess);
+            scanf(" %d", &guess); //get guess
             attempts++;
 
             if (guess == number) {
                 printf("\nCorrect!!");
-                printf("You guessed it in %d attempts.\n", attempts);
+                printf("You guessed it in %d attempts.\n", attempts); //end guess == number if
             } else if (guess < number) {
-                printf("Too low.\n\nYour answer : ");
+                printf("Too low.\n\nYour answer : "); //end guess < number if
             } else {
                 printf("Too high.\n\nYour answer : ");
-            }
-        } while (guess != number);
+            } //end else
+        } while (guess != number); //end do-while
         
         printf("Do you want to play again? (1: Play again, 2: Quit): ");
-        scanf(" %d", &playAgain);
-    } while (playAgain == 1);
+        scanf(" %d", &playAgain); //get playAgain
+    } while (playAgain == 1); //end do-while loops
 
     printf("Thank you for playing the game!\n");
 
     return 0;
-}
+} //end main function
