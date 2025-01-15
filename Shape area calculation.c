@@ -12,7 +12,7 @@ void main() {
 		printf("3. Circle\t[C/c]\n");
 		printf("4. Exit Program\t[E/e]\n");
 		printf("Enter shape : ");
-		scanf(" %c",&shapeId);
+		scanf(" %c",&shapeId); //get shapeId
 		shapeId = tolower(shapeId);
 		printf("--------------------------\n");
 		
@@ -27,32 +27,32 @@ void main() {
 				total = num1 * num2 * 0.5;
 				printf("Area = %.2f\n",total);
 				printf("--------------------------\n\n");
-				break;
+				break; //end t case
 			case 'r':
 				printf("\tRegtangle\n");
 				printf("Enter wide : ");
-				scanf("%f",&num1);
+				scanf("%f",&num1); //get num1 
 				printf("Enter long : ");
-				scanf("%f",&num2);
+				scanf("%f",&num2); //get num2
 	
 				total = num1 * num2;
 				printf("Area = %.2f\n",total);
 				printf("--------------------------\n\n");
-				break;
+				break; //end r case
 			case 'c':
 				printf("\tCircle\n");
 				printf("Enter radius : ");
-				scanf("%f",&num1);
+				scanf("%f",&num1); //get num1
 	
 				total = num1 * num1 * 3.14;
 				printf("Area = %.2f\n",total);
 				printf("--------------------------\n\n");
-				break;
+				break; //end c case
 			case 'e':
 				i = 2;
-				break;
+				break; //end e case
 			default:
-				printf("Unknow shape ID %c\n",shapeId);
-		}
-	} while(i == 1);
-}
+				printf("Unknow shape ID %c\n",shapeId); //end default case
+		} //end shapeId switch
+	} while(i == 1); //end do-while loops
+} //end main function
