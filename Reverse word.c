@@ -9,24 +9,24 @@ void main() {
     	printf("  Program reverse word\n");
     	printf("------------------------\n");
         printf("Enter message : ");
-        scanf(" %s", msg);
+        scanf(" %s", msg); //get msg
         
         do {
 			i++;
-		} while(msg[i] != '\0');
+		} while(msg[i] != '\0'); //end do-while loops
         
         printf("Reverse word : ");
         
         while(i > 0) {
             i--;
             printf("%c", msg[i]);
-        }
+        } //end while loops
         
         printf("\nplay again (Y/N) :  ");
         getchar();
-        scanf(" %c", &choice);
+        scanf(" %c", &choice); //get choice
         choice = toupper(choice);
         printf("\n");
         }
-    while(choice == 'Y');
-}
+    while(choice == 'Y'); //end do-while loops
+} //end main function
